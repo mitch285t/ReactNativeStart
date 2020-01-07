@@ -1,8 +1,22 @@
 import React from "react";
-import { Text, StyleSheet } from "react-native";
+import { Text, StyleSheet, View, Button, TouchableOpacity } from "react-native";
+import { setRecoveryProps } from "expo/build/ErrorRecovery/ErrorRecovery";
 
-const HomeScreen = () => {
-  return <Text style={styles.text}>Epstein didn't kill himself</Text>;
+const HomeScreen = ({ navigation }) => {
+  return (
+    <View>
+      <Text style={styles.text}>Epstein didn't kill himself</Text>
+      <Button
+        onPress={() => navigation.navigate("Components")}
+        title="Go to Components Demo"
+      />
+
+      <Button
+        onPress={() => navigation.navigate("List")}
+        title="Go to Components Demo"
+      />
+    </View>
+  );
 };
 
 const styles = StyleSheet.create({
