@@ -1,6 +1,5 @@
 import React from "react";
 import { Text, StyleSheet, View, Button, TouchableOpacity } from "react-native";
-import { setRecoveryProps } from "expo/build/ErrorRecovery/ErrorRecovery";
 
 const HomeScreen = ({ navigation }) => {
   return (
@@ -14,6 +13,10 @@ const HomeScreen = ({ navigation }) => {
       <Button
         onPress={() => navigation.navigate("List")}
         title="Go to Components Demo"
+      />
+      <Button
+        onPress={() => navigation.navigate("Image")}
+        title="Go to Images Demo"
       />
     </View>
   );
